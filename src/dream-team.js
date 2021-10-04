@@ -1,5 +1,4 @@
 import { NotImplementedError } from '../extensions/index.js';
-import {assert} from "chai";
 
 /**
  * Create name of dream team based on the names of its members
@@ -27,4 +26,3 @@ export default function createDreamTeam(members) {
   letter.forEach(i => s += i);
   return s;
 }
-

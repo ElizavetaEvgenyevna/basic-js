@@ -38,7 +38,3 @@ export default {
     return res;
   }
 };
-
-//chainMaker.addLink(1).addLink(2).addLink(3).finishChain();
-//chainMaker.addLink(1).addLink().addLink(2).removeLink(2).addLink(3).finishChain();
-// chainMaker.addLink(1).addLink(2).reverseChain().addLink(3).finishChain();

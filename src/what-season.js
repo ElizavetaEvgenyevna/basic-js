@@ -1,5 +1,4 @@
 import { NotImplementedError } from '../extensions/index.js';
-import {checkForThrowingErrors} from "../extensions/index";
 
 /**
  * Extract season from given date and expose the enemy scout!

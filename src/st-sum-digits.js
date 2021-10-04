@@ -28,5 +28,3 @@ export default function getSumOfDigits(n) {
     // console.log(result);
   }
 }
-
-// console.log(getSumOfDigits(95));

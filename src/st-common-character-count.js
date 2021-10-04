@@ -29,9 +29,3 @@ export default function getCommonCharacterCount(s1, s2) {
   }
   return result;
 }
-
-
-// let s1 = "aaabdcac";
-// let s2 = "aadcaa";
-//
-// console.log(getCommonCharacterCount(s1, s2));

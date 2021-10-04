@@ -1,5 +1,4 @@
 import { NotImplementedError } from '../extensions/index.js';
-import {assert} from "chai";
 
 /**
  * Calculate turns number and time (in seconds) required

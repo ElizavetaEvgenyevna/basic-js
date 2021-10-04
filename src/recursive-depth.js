@@ -24,7 +24,3 @@ export default class DepthCalculator {
     return result;
   }
 }
-
-// const depthCalc = new DepthCalculator();
-
-// console.log(depthCalc.calculateDepth([1, 2, 3, [4, 5]]));

@@ -1,5 +1,4 @@
 import { NotImplementedError } from '../extensions/index.js';
-import {assert} from "chai";
 
 /**
  * Given an email address, return it's domain.

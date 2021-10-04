@@ -1,5 +1,4 @@
 import { NotImplementedError } from '../extensions/index.js';
-import {assert} from "chai";
 
 /**
  * Create a repeating string based on the given parameters

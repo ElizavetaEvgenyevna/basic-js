@@ -1,5 +1,4 @@
 import { NotImplementedError } from '../extensions/index.js';
-import {assert} from "chai";
 
 const MODERN_ACTIVITY = 15;
 const HALF_LIFE_PERIOD = 5730;

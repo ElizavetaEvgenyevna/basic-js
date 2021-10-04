@@ -25,11 +25,3 @@ export default function countCats(matrix) {
   }
   return s;
 }
-
-
-// console.log(countCats([['^^^', '^^', '^^'], [0, '^^', 2], ['^^', 1, 2]]) == 4);
-// console.log(countCats([[0, '^^', 2], ['^^', 1, 2]]) == 2);
-// console.log(countCats([]) == 0);
-// console.log(countCats([['^^', '^^'], ['^^'], ['^^']]) == 4);
-// console.log(countCats([['^^^', '^^', '^^'], [], []]) == 2);
-

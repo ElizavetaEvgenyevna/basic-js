@@ -35,6 +35,3 @@ export default function renameFiles( names) {
   }
   return new_arr;
 }
-
-
-// console.log(renameFiles(["file", "file", "image", "file(1)", "file"]));

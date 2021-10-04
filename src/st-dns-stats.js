@@ -46,11 +46,3 @@ export default function getDNSStats( domains) {
   }
   return dict;
 }
-
-// let domains = [
-//  'code.yandex.ru',
-//  'music.yandex.ru',
-//  'yandex.ru'
-// ];
-//
-// console.log(getDNSStats(domains));
