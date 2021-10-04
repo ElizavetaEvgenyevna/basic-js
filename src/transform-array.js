@@ -13,7 +13,24 @@ import { NotImplementedError } from '../extensions/index.js';
  * transform([1, 2, 3, '--discard-prev', 4, 5]) => [1, 2, 4, 5]
  * 
  */
-export default function transform(/* arr */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+export default function transform(arr ) {
+  for (let i in arr) {
+    if (arr[i] === '--discard-next') {
+      arr.splice(i, 2);
+    }
+    if (arr[i] === '--discard-prev') {
+      arr.splice(i - 1, 2);
+    }
+    if (arr[i] === '--double-next') {
+      arr.splice(i, 1);
+      arr.splice(i, 0, arr[i]);
+    }
+    if (arr[i] === '--double-prev') {
+      arr.splice(i, 1);
+      arr.splice(i, 0, arr[i-1]);
+    }
+  }
+  return(arr);
 }
+
+// console.log(transform([1, 2, 3, '--discard-prev', 4, 5]));

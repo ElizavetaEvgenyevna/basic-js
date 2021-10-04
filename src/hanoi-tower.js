@@ -1,4 +1,5 @@
 import { NotImplementedError } from '../extensions/index.js';
+import {assert} from "chai";
 
 /**
  * Calculate turns number and time (in seconds) required
@@ -14,7 +15,19 @@ import { NotImplementedError } from '../extensions/index.js';
  * calculateHanoi(9, 4308) => { turns: 511, seconds: 427 }
  *
  */
-export default function calculateHanoi(/* disksNumber, turnsSpeed */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+var sum_global = 1;
+
+export default function calculateHanoi(disksNumber, turnsSpeed) {
+
+  Hanoi(disksNumber, sum_global);
+  let result = {'turns': sum_global, 'seconds': Math.round(sum_global/turnsSpeed*3600)};
+  return result;
+
+}
+
+function Hanoi(n, sum)
+{
+  if (n===1) { sum_global = sum; return; }
+  sum = sum * 2 + 1;
+  Hanoi(n-1, sum);
 }

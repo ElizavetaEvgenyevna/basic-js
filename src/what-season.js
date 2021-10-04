@@ -1,4 +1,5 @@
 import { NotImplementedError } from '../extensions/index.js';
+import {checkForThrowingErrors} from "../extensions/index";
 
 /**
  * Extract season from given date and expose the enemy scout!
@@ -11,7 +12,23 @@ import { NotImplementedError } from '../extensions/index.js';
  * getSeason(new Date(2020, 02, 31)) => 'spring'
  * 
  */
-export default function getSeason(/* date */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+export default function getSeason(date ) {
+  if (Object.prototype.toString.call(date) !== "[object Date]") return 'Unable to determine the time of year!';
+  if (isNaN(date.getTime())) return 'Invalid date!';
+
+  let month = date.getMonth();
+  console.log(month);
+  if (2 <= month && month <= 4) {
+        return 'spring';
+  }
+
+  if (5 <= month && month <= 7) {
+      return 'summer';
+  }
+
+  if (8 <= month && month <= 10) {
+      return 'autumn';
+  }
+
+  return 'winter';
 }

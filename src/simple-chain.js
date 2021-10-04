@@ -5,24 +5,40 @@ import { NotImplementedError } from '../extensions/index.js';
  * 
  */
 export default {
+  chainMaker() {
+    this.s = []
+  },
   getLength() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    return this.s.length;
   },
-  addLink(/* value */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  addLink(value) {
+  if (value == undefined)
+    value = " ";
+    this.s.push(value);
+    return this;
   },
-  removeLink(/* position */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  removeLink(position) {
+    if (!(position-1 in this.s))
+      throw new Error('You can\'t remove incorrect link!');
+    this.s.splice(position-1, 1);
+    return this;
   },
   reverseChain() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    this.s.reverse();
+    return this;
   },
   finishChain() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    let res = "";
+    for (let i in this.s)
+      if (i < this.s.length-1)
+        res = res + "(" + this.s[i] + ")~~";
+      else
+        res = res + "(" + this.s[i] + ")";
+      console.log(res);
+    return res;
   }
 };
+
+//chainMaker.addLink(1).addLink(2).addLink(3).finishChain();
+//chainMaker.addLink(1).addLink().addLink(2).removeLink(2).addLink(3).finishChain();
+// chainMaker.addLink(1).addLink(2).reverseChain().addLink(3).finishChain();
